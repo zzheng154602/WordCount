@@ -1,4 +1,4 @@
-// WordCount.cpp : ¶¨Òå¿ØÖÆÌ¨Ó¦ÓÃ³ÌĞòµÄÈë¿Úµã¡£
+// WordCount.cpp : å®šä¹‰æ§åˆ¶å°åº”ç”¨ç¨‹åºçš„å…¥å£ç‚¹ã€‚
 //
 
 #include "stdafx.h"
@@ -21,16 +21,17 @@ int main(int argc,char *argv[])
 			ch = fgetc(fp);
 			cnt++;
 		}
-		printf("×Ö·ûÊı£º%d\n",--cnt);
+		printf("å­—ç¬¦æ•°ï¼š%d\n",--cnt);
 	}
 	else if(strcmp(argv[1],"-w") == 0 || strcmp(argv[1],"-W") == 0)
 	{
 		while(!feof(fp))
 		{
 			ch = fgetc(fp);
+			if (ch == ' '||ch==',')
 			cnt++;
 		}
-		printf("µ¥´ÊÊı£º%d\n",--cnt);
+		printf("å•è¯æ•°ï¼š%d\n",--cnt);
 	}
 	return 0;
 }
